@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- ng-app指定AngularJS的作用域 -->
+<html ng-app>
+    <head>
+        <script src="lib/angular.js"></script>
+    </head>
+    <!-- {{}}中是问候语中绑定的表达式 -->
+        Hello {{'World'}}!
+    <hr>
+
+    <!-- 1、将input绑定到yourname的数据模型上
+         2、{{}}将数据模型添加上输出语句上
+         3、
+     -->
+    Your name: <input type="text" ng-model="yourname" placeholder="World">
+        <hr>
+        Hello {{yourname || 'World'}}!
+    </body>
+
+    <!-- 
+    AngularJS的解析：模型-视图-控制器
+    视图：
+        模板是您用HTML、CSS编写的文件，展现应用的视图。您可给HTML添加新的元素、属性标记，作为AngularJS编译器的指令。AngularJS编译器是完全可扩展的，这意味着通过AngularJS您可以HTML中构建您自己的HTML标记！
+    应用程序逻辑和行为：
+        应用程序逻辑和行为是您用Javascript定义的控制器。AngularJS与标准的AJAX应用程序不同，您不需要另外编写侦听器或DOM控制器，因为他们已经内置到AngularJS中了。这些功能使您的应用程序逻辑很容易编写、测试、维护和理解。
+    模型数据：
+        模型是AngularJS作用域对象的属性引申的。模型中的数据可能是Javascript对象、数组或基本类型，这都不重要，重要的是，他们都属于AngularJS作用域对象。
+
+    AngularJS通过作用域来保持数据模型与视图界面UI的双向同步，一旦模型状态发生改变，AngularJS会立即刷新梵音在视图界面中，反之亦然。
+
+     -->
+
+
+</html>
